@@ -1,0 +1,33 @@
+﻿<Application x:Class="WpfApp1.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WpfApp1"
+             xmlns:view="clr-namespace:WpfApp1.view"
+             xmlns:vm="clr-namespace:WpfApp1.viewModel">
+    <Application.Resources>
+        <ResourceDictionary>
+
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="utility/styles/button.xaml"/>
+                <ResourceDictionary Source="utility/styles/TextBlock.xaml"/>
+                <ResourceDictionary Source="utility/styles/TextBox.xaml"/>
+                <ResourceDictionary Source="utility/styles/ComboBox.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <DataTemplate DataType="{x:Type vm:PartnersVM }">
+                <view:PartnersView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type vm:AddAndEditUserVM}">
+                <view:AddAndEditUserView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type vm:PartnerHistoryVM}">
+                <view:PartnerHistoryView/>
+            </DataTemplate>
+
+
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
